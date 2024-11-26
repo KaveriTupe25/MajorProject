@@ -1,0 +1,419 @@
+/* Primary Theme Colors */
+:root {
+  --primary-color: #1e88e5b9;       /* Bright Blue for main highlights */
+  --secondary-color: #1565c0ca;     /* Darker Blue for headers */
+  --accent-color: #e3f2fd;        /* Light Blue Background */
+  --text-color: #333333;          /* Dark Gray for text */
+  --bg-color: #b3b3cc;            /* Light Gray Background */
+  --card-bg-color: #ffffff;       /* White for Cards */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+/* Centered Welcome Section with Fade and Scale Animation */
+.welcome-section {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--card-bg-color);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 1.5s ease forwards;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Keyframes for fade-in and scale-up animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Intro Section Styles */
+.intro-section {
+  background-color: var(--accent-color);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Info Section Styles */
+.info-section {
+  padding: 20px;
+  background-color: var(--bg-color);
+}
+
+.info-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.info-card {
+  background-color: var(--card-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.info-icon {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 18px;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+.start-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.start-button {
+  background: linear-gradient(90deg, #1e88e5b9, #58a9efb9);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.start-button:hover {
+  background: linear-gradient(40deg, #2575fc, #b384e5);
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.start-button:active {
+  transform: scale(0.95);
+}
+
+.dashboard-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.input-section, .file-section, .output-section {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 400px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.capture-button, .calculate-button {
+  background: linear-gradient(45deg, #1e88e5b9, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.capture-button:hover, .calculate-button:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+h2 {
+  margin-top: 20px;
+  color: #333;
+}
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f0f4ff, #e0e7ff);
+  color: #333;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+.dashboard-container h1 {
+  font-size: 2.5rem;
+  color: #056cc7b9;
+  margin-bottom: 20px;
+}
+
+/* Input section */
+.input-section label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.input-section input[type="number"],
+.input-section input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-section input[type="number"]:focus,
+.input-section input[type="file"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+}
+
+/* Capture Image button */
+.capture-button {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.capture-button:hover {
+  background-color: #5748c8;
+  transform: scale(1.05);
+}
+
+.capture-button:active {
+  background-color: #4436a1;
+  transform: scale(0.98);
+}
+
+/* Calculate Insulin button */
+.calculate-button {
+  background: linear-gradient(45deg, #1e88e5b9, #2575fc);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.calculate-button:hover {
+  background: linear-gradient(90deg, #5748c8, #5673ff);
+  transform: scale(1.05);
+}
+
+.calculate-button:active {
+  background: linear-gradient(90deg, #4436a1, #4e64d9);
+  transform: scale(0.98);
+}
+
+/* Captured Image Section */
+.captured-image img {
+  margin-top: 15px;
+  max-width: 100%;
+  border: 3px solid #6c63ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.captured-image h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Output Section */
+.output-section h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.output-section h2 span {
+  font-weight: bold;
+  color: #6c63ff;
+}
+.start-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.start-button {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.start-button:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.start-button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .start-button {
+    font-size: 1em;
+    padding: 12px 30px;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .dashboard-container h1 {
+    font-size: 2rem;
+  }
+
+  .input-section label {
+    font-size: 1rem;
+  }
+
+  .output-section h2 {
+    font-size: 1.2rem;
+  }
+}
+/* General Button Styles */
+.image-options button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Confirm Button Styles */
+.confirm-button {
+  background-color: #28a745; /* Green color */
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Retake Button Styles */
+.retake-button {
+  background-color: #dc3545; /* Red color */
+  color: white;
+}
+
+.retake-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Additional Styling for Button Alignment */
+.image-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+.captured-image img {
+  max-width: 100%;
+  max-height: 400px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .start-button {
+    font-size: 1em;
+    padding: 12px 30px;
+  }
+}
+
